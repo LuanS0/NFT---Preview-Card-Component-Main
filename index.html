@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style-reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
   
   <title>Frontend Mentor | NFT preview card component</title>
@@ -12,9 +13,10 @@
 </head>
 <body>
   <main>
-    <div class="selector-theme">
-      <input class="theme-selector" type="checkbox" name="theme-selector">
-    </div>
+    <label class="control">
+      <input class="theme-selector" type="checkbox" name="theme">
+      <div class="selector-theme"></div>
+    </label>
       <article class="main-article">
         <!--PREVIEW CONTENT-->
         <aside class="preview-content">
@@ -48,5 +50,6 @@
         </section>
       </article>
   </main>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

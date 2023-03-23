@@ -1,30 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat:wght@500&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-.theme-selector{
-    width: 30px;
-    position: absolute;
-    right: 0px;
-    top: 40px;
+:root{
+    --bg-main: #ffffff;
+    --bg-color: #fff4dd;
+    --clr-span: #6e4510;
+    --tt-card: #583e03;
+    --description-card: #000000;
 }
-
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
-    background-color: rgb(255, 244, 221);
+    background-color: var(--bg-color);
     padding: 10px;
 }
 
 main{
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
     border-radius: 15px;
     position: relative;
 }
@@ -34,6 +31,7 @@ main{
 }
 
 .main-article{
+    background-color: var(--bg-main);
     display: flex;
     flex-direction: column;
     max-width: 20rem;
@@ -46,6 +44,58 @@ main{
     border-radius: 15px;
 }
 
+/*THEME SELECTOR*/
+.theme-selector{
+    display: none;
+}
+
+.selector-theme{
+    display: flex;
+    align-items: center;
+    background-color: rgb(47, 59, 71);
+    width: 46px;
+    height: 23px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.selector-theme::after{
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-left: 3px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    position: absolute;
+}
+
+.selector-theme::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    margin-left: 3px;
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    z-index: 1;
+}
+.theme-selector:checked + .selector-theme::before{
+    background-color: rgb(47, 59, 71);
+    transform: translateX(15px);
+}
+
+.theme-selector:checked .selector-theme{
+    background-color: white;
+}
+
+.theme-selector:checked + .selector-theme::after{
+    background-color: white;
+    transform: translateX(22px);
+}
+
+
+/*PREVIEW CONTENT*/
 .preview-content{
     display: flex;
     overflow: hidden;
@@ -71,17 +121,17 @@ main{
 }
 
 
-/**/
+/*TITTLE CARD*/
 
 .tittle-card{
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
-    color: rgb(88, 62, 3);
+    color: var(--tt-card);
 }
 .card-description{
     font-size: 15px;
     font-family: 'Inter', sans-serif;
-    color: black;
+    color: var(--description-card);
 }
 
 
@@ -114,7 +164,7 @@ main{
 }
 
 .author-description img{
-    border: solid 3px rgb(88, 62, 3);
+    border: solid 3px var(--tt-card);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -128,7 +178,6 @@ main{
 }
 
 .author-details span{
-    color: rgb(110, 69, 16);
+    color: var(--clr-span);
     font-weight: 600;
 }
-
