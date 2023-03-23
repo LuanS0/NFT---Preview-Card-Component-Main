@@ -7,11 +7,11 @@
 
 <div align="center">
   <h3>
-    <a href=" " color="white">
+    <a href="https://brilliant-bubblegum-9c99d0.netlify.app/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href=" ">
+    <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-main-darklight-mode-wHK_FE8zJ1">
       Solution
     </a>
    <span> | </span>
